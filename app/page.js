@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import QrScannerModal from '@/components/QrScannerModal';
 
 const demoCases = [
@@ -147,10 +148,16 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Subtle Footer */}
-        <footer className="mt-8 text-xs text-slate-400 text-center pb-6">
-          ভূমি সেবা ডিজিটালাইজেশন সহায়তা &bull; ২০২৬
-        </footer>
+        {/* Home Page Footer Link */}
+        <div className="mt-6 text-xs text-slate-500 text-center pb-2">
+          <Link
+            href="/about"
+            className="inline-flex items-center gap-1.5 text-[#14532d] hover:underline font-semibold bg-emerald-50/70 hover:bg-emerald-50 px-3.5 py-2 rounded-xl border border-emerald-100 transition-colors cursor-pointer"
+          >
+            <span>ℹ️</span>
+            <span>কীভাবে কাজ করে ও পরিচিতি</span>
+          </Link>
+        </div>
       </div>
 
       {/* QR Scanner Modal */}
