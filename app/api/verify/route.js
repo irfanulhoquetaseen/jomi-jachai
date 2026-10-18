@@ -1,7 +1,6 @@
 import { verifyLandRecord } from '@/lib/verify';
 import { messages } from '@/lib/messages';
 
-export const dynamic = 'force-dynamic';
 
 /**
  * GET /api/verify?q=...
@@ -25,6 +24,9 @@ export async function GET(request) {
     const result = await verifyLandRecord(q);
     return Response.json(result, { status: 200 });
   } catch (error) {
+    if (error?.digest?.includes('PRERENDER')) {
+      throw error;
+    }
     console.error('API /api/verify handler error:', error);
     return Response.json(
       {

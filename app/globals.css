@@ -2,8 +2,8 @@
 
 :root {
   --font-noto-bengali: 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
-  --background: #090d16;
-  --foreground: #f8fafc;
+  --background: #f8faf7;
+  --foreground: #14532d;
 }
 
 @theme {
@@ -12,6 +12,14 @@
 
 body {
   font-family: var(--font-noto-bengali), system-ui, -apple-system, sans-serif;
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: #f8faf7;
+  color: #1e293b;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure smooth tap animations on mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
 }

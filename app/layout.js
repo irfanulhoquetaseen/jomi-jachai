@@ -9,8 +9,8 @@ const notoSansBengali = Noto_Sans_Bengali({
 });
 
 export const metadata = {
-  title: "জমি যাচাই",
-  description: "মোবাইল-ফার্স্ট বাংলা ডিজিটাল ভূমি যাচাই ও ভেরিফিকেশন সিস্টেম",
+  title: "জমি যাচাই | নিরাপদ জমি নিশ্চিতকরণ",
+  description: "জমি কেনার আগে ১০ সেকেন্ডে জানুন নিরাপদ কি না - ডিজিটাল খতিয়ান ও দলিল যাচাই",
 };
 
 export const viewport = {
@@ -18,13 +18,13 @@ export const viewport = {
   initialScale: 1,
   maximumScale: 1,
   viewportFit: "cover",
-  themeColor: "#090d16",
+  themeColor: "#14532d",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="bn" className={notoSansBengali.variable}>
-      <body className={`${notoSansBengali.className} antialiased min-h-screen bg-[#090d16] text-slate-100`}>
+      <body className={`${notoSansBengali.className} min-h-screen bg-[#f8faf7] text-slate-800 antialiased`}>
         {children}
       </body>
     </html>
