@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  --font-noto-bengali: 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+  --background: #090d16;
+  --foreground: #f8fafc;
+}
+
+@theme {
+  --font-sans: var(--font-noto-bengali);
+}
+
+body {
+  font-family: var(--font-noto-bengali), system-ui, -apple-system, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
